@@ -1,4 +1,7 @@
-# Topics:
+# DSA
+This is a Repository containing record of daily DSA practice.
+
+## Topics:
 1. Mathematics
 2. Bit Manipulation
 3. Arrays
