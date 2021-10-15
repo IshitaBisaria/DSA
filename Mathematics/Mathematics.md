@@ -1,9 +1,9 @@
 # Table of Contents
 
  - [Modular Arithmetic](#Modular-Arithmetic)
- - Euclid's Algorithm for GCD and LCM
- - Trailing Zeroes in a Factorial
- - Check for Prime Numbers :  O(n), O(sqrt(n)), leaving iterations for 2 and 3 O(sqrt(n)
+ - [Euclid's Algorithm for GCD and LCM](#Euclid-GCD)
+ - [Trailing Zeroes in a Factorial](#Trailing-Zeroes)
+ - [Check for Prime Numbers :  O(n), O(sqrt(n)), leaving iterations for 2 and 3 O(sqrt(n)](#Prime-Check)
  - Prime Factors : O(n^2logn), O(nlogn), leaving iterations for 2 and 3
  - All Divisors for a Number : Not in order, In order
  - Sieve of Erathosthenes
@@ -13,22 +13,24 @@
  - Exactly 3 Divisors : Only the squares of prime numbers are the numbers with exactly 3 divisors.
 
 
-
-
+## Implementation
+#### Modular-Arithmetic
 ```
-Modular-Arithmetic
 % m where m is 1e9 + 7
 ```
 
+#### Euclid-GCD
 ```
 return gcd(b, a%b);
 ```
 
+#### Trailing-Zeroes
 ```
 for(int i = 5;i <= n; i *= 5)
     ans += n/i;
 ```
 
+#### Prime-Check
 ```
     for(int i=2;i<n;i++)
         if(n%i == 0)
