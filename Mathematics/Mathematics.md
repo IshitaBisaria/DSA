@@ -14,8 +14,9 @@
 
 
 
-##### Modular-Arithmetic
+
 ```
+Modular-Arithmetic
 % m where m is 1e9 + 7
 ```
 
