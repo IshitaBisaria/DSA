@@ -1,4 +1,6 @@
- - Modular Arithmetic
+# Table of Contents
+
+ - [Modular Arithmetic](#Modular-Arithmetic)
  - Euclid's Algorithm for GCD and LCM
  - Trailing Zeroes in a Factorial
  - Check for Prime Numbers :  O(n), O(sqrt(n)), leaving iterations for 2 and 3 O(sqrt(n)
@@ -11,8 +13,10 @@
  - Exactly 3 Divisors : Only the squares of prime numbers are the numbers with exactly 3 divisors.
 
 
+
+##### Modular-Arithmetic
 ```
-%m where m is 1e9 + 7
+% m where m is 1e9 + 7
 ```
 
 ```
