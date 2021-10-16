@@ -4,10 +4,10 @@
  - [Euclid's Algorithm for GCD and LCM](#Euclid-GCD)
  - [Trailing Zeroes in a Factorial](#Trailing-Zeroes)
  - [Check for Prime Numbers](#Prime-Check)
- - [Prime Factors : O(n^2logn), O(nlogn), leaving iterations for 2 and 3](#Prime-Factors)
- - [All Divisors for a Number : Not in order, In order](#Divisors)
+ - [Prime Factors](#Prime-Factors)
+ - [All Divisors for a Number](#Divisors)
  - [Sieve of Erathosthenes](#Sieve)
- - [Power of a Number : Recursive, Iterartive : Binary Exponentiation](#Power)
+ - [Power of a Number : Binary Exponentiation](#Power)
  - [Digits in a Factorial for n < 10^5](#Digits-in-Factorial-1)
  - [Digits in a Factorial for n > 10^5](#Digits-in-Factorial-2)
  - [Exactly 3 Divisors](#Exacty-3-Divisors)
@@ -61,6 +61,7 @@ for(int i = 5;i <= n; i *= 5)
 
 #### Prime-Factors
 ``` C++
+    // O(n^2logn)
     for(int i = 2;i < n;i++) {
         if(isPrime(i)) {
             int x = i;
@@ -73,6 +74,7 @@ for(int i = 5;i <= n; i *= 5)
 ```
 
 ``` C++
+    // O(nlogn)
     for(int i = 2; i*i <= n;i++) {
         while(n % i == 0) {
             cout<<i<<" ";
@@ -84,6 +86,7 @@ for(int i = 5;i <= n; i *= 5)
 ```
 
 ``` C++
+    // Further Optimisation leaving iterations for 2 and 3
     while(n % 2 == 0) {
         cout<< n <<" ";
         n /= 2;
@@ -108,6 +111,7 @@ for(int i = 5;i <= n; i *= 5)
 
 #### Divisors
 ``` C++
+    // Not in Order
     for(int i = 1; i*i <= n;i++) {
         if(n % i == 0) {
             cout<<i<<" ";
@@ -118,6 +122,7 @@ for(int i = 5;i <= n; i *= 5)
 ```
 
 ``` C++
+    // In Order
     for(int i = 1; i*i <= n;i++) {
         if(n % i == 0)
             cout<<i<<" ";
@@ -143,6 +148,7 @@ for(int i = 5;i <= n; i *= 5)
 
 #### Power
 ``` C++
+    // Recursive
     int power(int x, int n) {
         int t = power(x, n/2);
         if(n % 2 == 0)
@@ -153,6 +159,7 @@ for(int i = 5;i <= n; i *= 5)
 ```
 
 ``` C++
+    // Iterative
     while(n) {
         if(n & 1)
             res = (res * x) % m;
@@ -168,7 +175,6 @@ for(int i = 5;i <= n; i *= 5)
     Then, Using log Property : log(ab) = log(a) + log(b)
 ```
 
-#### Digits-in-Factorial-2
 ```
     For n > 10^5 : Kamenetsky’s formula : Factorial = log10((n/e)^n * sqrt(2*pi*n)), digits = floor(factorial) + 1
 ```
