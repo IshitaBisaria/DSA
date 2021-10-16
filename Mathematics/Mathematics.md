@@ -55,3 +55,9 @@ for(int i = 5;i <= n; i *= 5)
             return false;
     return true;
 ```
+
+#### Prime-Check
+```C++
+  for(int i = 0;i<n;i++) {
+  }
+```
