@@ -3,7 +3,7 @@
  - [Modular Arithmetic](#Modular-Arithmetic)
  - [Euclid's Algorithm for GCD and LCM](#Euclid-GCD)
  - [Trailing Zeroes in a Factorial](#Trailing-Zeroes)
- - [Check for Prime Numbers :  O(n), O(sqrt(n)), leaving iterations for 2 and 3 O(sqrt(n)](#Prime-Check)
+ - [Check for Prime Numbers](#Prime-Check)
  - [Prime Factors : O(n^2logn), O(nlogn), leaving iterations for 2 and 3](#Prime-Factors)
  - [All Divisors for a Number : Not in order, In order](#Divisors)
  - [Sieve of Erathosthenes](#Sieve)
@@ -32,6 +32,7 @@ for(int i = 5;i <= n; i *= 5)
 
 #### Prime-Check
 ``` C++
+    // O(n)
     for(int i=2;i<n;i++)
         if(n%i == 0)
             return false;
@@ -39,6 +40,7 @@ for(int i = 5;i <= n; i *= 5)
 ```
 
 ``` C++
+    // O(sqrt(n))
     for(int i=2;i*i<n;i++)
         if(n%i == 0)
             return false;
@@ -46,6 +48,7 @@ for(int i = 5;i <= n; i *= 5)
 ```
 
 ``` C++
+    // Further Optimisation leaving iterations for 2 and 3 O(sqrt(n)
     if(n == 2 || n == 3)
         return true;
     if(n % 2 == 0 || n % 3 == 0)
