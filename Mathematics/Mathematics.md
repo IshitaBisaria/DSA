@@ -8,15 +8,14 @@
  - [All Divisors for a Number](#Divisors)
  - [Sieve of Erathosthenes](#Sieve)
  - [Power of a Number : Binary Exponentiation](#Power)
- - [Digits in a Factorial for n < 10^5](#Digits-in-Factorial-1)
- - [Digits in a Factorial for n > 10^5](#Digits-in-Factorial-2)
+ - [Digits in a Factorial](#Digits-in-Factorial)
  - [Exactly 3 Divisors](#Exacty-3-Divisors)
 
 
 ## Implementation
 #### Modular-Arithmetic
 ```
-% m where m is 1e9 + 7
+    % m where m is 1e9 + 7
 ```
 
 #### Euclid-GCD
@@ -26,8 +25,8 @@
 
 #### Trailing-Zeroes
 ``` C++
-for(int i = 5;i <= n; i *= 5)
-    ans += n/i;
+    for(int i = 5;i <= n; i *= 5)
+        ans += n/i;
 ```
 
 #### Prime-Check
@@ -169,7 +168,7 @@ for(int i = 5;i <= n; i *= 5)
     return res;
 ```
 
-#### Digits-in-Factorial-1
+#### Digits-in-Factorial
 ```
     For n < 10^5 : floor of the log10 of a number + 1 gives the number of digits in the number
     Then, Using log Property : log(ab) = log(a) + log(b)
