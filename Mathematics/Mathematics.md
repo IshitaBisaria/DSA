@@ -139,6 +139,7 @@
         if(primeSieve[i]) {
             for(int j = i*i;j <= n; j += i)
                 primeSieve[j] = false;
+        }
     }
     for(int i = 2;i <= n;i++)
         if(isPrime[i])
