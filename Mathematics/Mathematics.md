@@ -182,7 +182,8 @@
 #### Exacty-3-Divisors
 ``` C++
      // Only the squares of prime numbers are the numbers with exactly 3 divisors
-     for(int i = 2; i <= n; i++) {
+     int ans = 0;
+     for(int i = 2; i*i <= n; i++) {
         if(isPrime(i))
             ans++;
      }
