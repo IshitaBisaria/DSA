@@ -1,0 +1,58 @@
+ - Check for kth set bit or not
+    ```
+        - Form a no with kth bit as set and & it with original no.
+        - Right shift the number by k bits and & it with 1.
+    ```
+ - Odd no. Last bit - 1 amd 0 in Even number
+ - << : multiphy by 2, >> : divide by 2
+ - Leftmost Set bit - MSB, Rightmost Set bit - LSB
+ - Set Bit - 1, Unset Bit - 0
+ - Check for Set Bit - (n&(1<<i)) != 0
+ - XOR Properties : x^x = 0, x^0 = x
+ - Set Bit : n | (1<<i)
+ - Unset Bit : n & ~(1<<i)
+ - Toggle Bit : n ^ (1<<k)
+ - Print Binary:
+    ``` C++
+        for(int i = 10; i >= 0; i--)
+            cout << (n >> i) & 1;
+    ```
+ - 5th Bit of UpperCase is 0 and LowerCase is 1.
+ - Position of Rightmost Set bit : log2(n & -n) + 1
+ - (-n) rotates all the bits from left to right till the last set bit.
+ - Largest power of 2
+    ``` C++
+        int x = 0;
+        while((1<<x) <= n)
+            x++;
+        return x-1;
+    ```
+ - Count Set Bits
+    ```
+        - Naive Method : Traversing all Bits
+        - Brian Kerningham's Algorithm : 
+            - (n-1) will rotate all the bits till the last set bit.
+            - n = n & (n-1)
+            - Runs for the number of set bits
+            - O(no. of set bits)
+        - __builtin_popcount(n) : count the number of set bits
+    ```
+ - Power of 2
+    The power of 2 will only have 1 set bit
+ - One Odd Occurring
+    ``` C++
+        // x ^ x = 0
+        for(int i = 0; i < n; i++)
+            ans ^= arr[i];
+        return ans;
+    ```
+ - Missing Number
+    ``` C++
+        // XOR of all the numbers from 1 to n+1 and then again XOR of all the elements with the res.
+        for(int i = 1; i <= n+1; i++)
+            ans ^= i;
+        for(int i = 0; i < n; i++)
+            ans ^= arr[i];
+        return ans;
+    ```
+ - Two Odd Occurring
