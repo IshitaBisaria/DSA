@@ -3,7 +3,7 @@ This is a Repository containing record of daily DSA practice.
 
 ## Topics:
 1. [Mathematics](./Mathematics)
-2. [Bit Manipulation](./Bit Manipulation)
+2. [Bit Manipulation](./Bit-Manipulation)
 3. Arrays
 4. Searching
 5. Sorting
