@@ -38,7 +38,9 @@
         - __builtin_popcount(n) : count the number of set bits
     ```
  - Power of 2
-    The power of 2 will only have 1 set bit
+    ```
+        The power of 2 will only have 1 set bit
+    ```
  - One Odd Occurring
     ``` C++
         // x ^ x = 0
