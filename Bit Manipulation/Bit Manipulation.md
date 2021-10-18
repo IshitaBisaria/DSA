@@ -74,8 +74,10 @@
             xor = xor ^ arr[i];
         // Find the rightmost set bit mass by using the formula : n&-n or n&~(n-1)
         int rsbm = n & -n;
-        // Divide the array in two groups of numbers having the rightmost set bit as on and the numbers having this rightmost set bit as off.
-        // The xor of the numbers of the first group will give the first number and the xor of the second group will give the second number.
+        // Divide the array in two groups of numbers having the rightmost set bit as on
+        // and the numbers having this rightmost set bit as off.
+        // The xor of the numbers of the first group will give the first number
+        // and the xor of the second group will give the second number.
         int ans1 = 0, ans2 = 0;
         for(int i =0; i < n; i++)
             if(rsbm & arr[i] != 0) {
