@@ -47,7 +47,7 @@
 ```
 
 ``` C++
-    // Further Optimisation leaving iterations for 2 and 3 O(sqrt(n)
+    // Further Optimisation leaving iterations for 2 and 3 O(sqrt(n))
     if(n == 2 || n == 3)
         return true;
     if(n % 2 == 0 || n % 3 == 0)
@@ -176,7 +176,7 @@
 ```
 
 ```
-    For n > 10^5 : Kamenetsky’s formula : Factorial = log10((n/e)^n * sqrt(2*pi*n)), digits = floor(factorial) + 1
+    For n > 10^5 : Kamenetsky’s formula : Factorial = log10((n/e)^n * sqrt(2*pi*n)), digits = floor(Factorial) + 1
 ```
 
 #### Exacty-3-Divisors
