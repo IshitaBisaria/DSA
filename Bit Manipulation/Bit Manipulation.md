@@ -1,4 +1,4 @@
- - Check for kth set bit or not
+ - Check for kth bit is set or not
     ```
         - Form a no with kth bit as set and & it with original no.
         - Right shift the number by k bits and & it with 1.
@@ -19,6 +19,15 @@
     ```
  - 5th Bit of UpperCase is 0 and LowerCase is 1.
  - Position of Rightmost Set bit : log2(n & -n) + 1
+ - Rightmost Set Bit Mass : n & -n or n ^ ~(n-1)
+    ```
+        Eg: 18 : 10010
+            -18 : 01110
+            18 & -18 : 00010
+            17 : 10001
+            ~17 : 01110
+            18 & ~17 : 00010
+    ```
  - (-n) rotates all the bits from left to right till the last set bit.
  - Largest power of 2
     ``` C++
@@ -58,3 +67,23 @@
         return ans;
     ```
  - Two Odd Occurring
+    ``` C++
+        // Take the xor of all the numbers and then the xor variable will have xor of the two odd occurring numbers.
+        int xor = 0;
+        for(int i =0; i < n; i++)
+            xor = xor ^ arr[i];
+        // Find the rightmost set bit mass by using the formula : n&-n or n&~(n-1)
+        int rsbm = n & -n;
+        // Divide the array in two groups of numbers having the rightmost set bit as on and the numbers having this rightmost set bit as off.
+        // The xor of the numbers of the first group will give the first number and the xor of the second group will give the second number.
+        int ans1 = 0, ans2 = 0;
+        for(int i =0; i < n; i++)
+            if(rsbm & arr[i] != 0) {
+                ans1 = ans1 ^ arr[i];
+            else
+                ans2 = ans2 ^ arr[i];
+        }
+        cout<< ans1 << " " << ans2;
+    ```
+ - Power Set using Bitwise
+    ```
