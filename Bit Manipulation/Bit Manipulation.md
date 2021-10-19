@@ -88,7 +88,7 @@
         cout<< ans1 << " " << ans2;
     ```
  - Power Set using Bitwise
-    ```
+    ``` C++
         Iterates form 0 to 2^n - 1 and then check for 0 for not pick and 1 for pick and then pick up
         int n = s.size();
         for(int i = 0; i < 2^n - 1; i++) {
@@ -101,14 +101,14 @@
         }
     ```
  - Number is Sparse or not
-    ```
+    ``` C++
         if(n & (n >> 1)) // or n & (n << 1)
             return false;
         return true;
     ```
  - Count Set Bits from 1 to n
  - Longest Consecutive 1's
-    ```
+    ``` C++
         int ans = 0;
         while(n) {
             n = n & (n >> 1); // or n = n & (n << 1);
@@ -117,7 +117,7 @@
         return ans;
     ```
  - Binary to Gray Code
-    ```
+    ``` C++
         return n ^ (n >> 1);
     ```
  - Gray code to Binary
