@@ -19,7 +19,7 @@
     ```
  - 5th Bit of UpperCase is 0 and LowerCase is 1.
  - Position of Rightmost Set bit : log2(n & -n) + 1
- - Rightmost Set Bit Mass : n & -n or n ^ ~(n-1)
+ - Rightmost Set Bit Mask : n & -n or n ^ ~(n-1)
     ```
         Eg: 18 : 10010
             -18 : 01110
@@ -107,6 +107,17 @@
         return true;
     ```
  - Count Set Bits from 1 to n
+    ```
+        // Naive : Count all the se bits from 1 to n
+        // Efficient :
+        // Eg: n = 11
+        // 1. Find the largest power of 2 less than or equal to n, let it be x, here, 2^3 = 8, x = 3
+        // 2. Analyze the bits from 0 to 7
+        // 3. Set bits from 0 to 7 --> (8/2) * 3 or 2^(x-1) * x
+        // 4. Add 12 - 7 = 4 or Add n - 2^x + 1
+        // 5. Recursively call the same function for (n - 2^x)
+        // Therefore, s(n) = 2^(x-) * x + (n - 2^x + 1) + s(n - 2^x)
+    ```
  - Longest Consecutive 1's
     ``` C++
         int ans = 0;
@@ -118,8 +129,35 @@
     ```
  - Binary to Gray Code
     ``` C++
+        // The Most Significant Bit (MSB) of the gray code is always equal to the MSB of the given binary code.
+        // Other bits of the output gray code can be obtained by XORing binary code bit at that index and previous index.
         return n ^ (n >> 1);
     ```
  - Gray code to Binary
+    ```
+        // The Most Significant Bit (MSB) of the binary code is always equal to the MSB of the given gray code.
+        // Other bits of the output binary code can be obtained by checking gray code bit at that index.
+        // If current gray code bit is 0, then copy previous binary code bit, else copy invert of previous binary code bit.
+        int binaryConverter(int n)
+        {
+            int res = n;
+            while (n > 0)
+            {
+                n >>= 1;
+                res ^= n;
+            }
+            return res;
+        }
  - Swap all odd and even bits
+    ```
+        // Preserve the Even and Odd bits in two separate numbers
+        // Right shift the even bits number and left shift the odd bits number
+        // The even bits will come at the position of odd bits and odd bits will come at the position of even bits
+        // return even | odd as this will swap the even and odd bits
+        unsigned int even = n & 0xAAAAAAAA;
+        unsigned int odd = n & 0x55555555;
+        even = even >> 1;
+        odd = odd << 1;
+        return even | odd;
+    ```
  - Maximum AND value
