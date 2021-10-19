@@ -89,3 +89,37 @@
     ```
  - Power Set using Bitwise
     ```
+        Iterates form 0 to 2^n - 1 and then check for 0 for not pick and 1 for pick and then pick up
+        int n = s.size();
+        for(int i = 0; i < 2^n - 1; i++) {
+            for(int j = 0; j < n; j++) {
+                // if( jth bit is set) Pick that element
+                if(i & (1 << j) != 0)
+                    cout<<s[j];
+            }
+            cout<<endl;
+        }
+    ```
+ - Number is Sparse or not
+    ```
+        if(n & (n >> 1)) // or n & (n << 1)
+            return false;
+        return true;
+    ```
+ - Count Set Bits from 1 to n
+ - Longest Consecutive 1's
+    ```
+        int ans = 0;
+        while(n) {
+            n = n & (n >> 1); // or n = n & (n << 1);
+            ans++;
+        }
+        return ans;
+    ```
+ - Binary to Gray Code
+    ```
+        return n ^ (n >> 1);
+    ```
+ - Gray code to Binary
+ - Swap all odd and even bits
+ - Maximum AND value
