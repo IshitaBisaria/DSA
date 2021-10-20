@@ -116,7 +116,7 @@
         // 3. Set bits from 0 to 7 --> (8/2) * 3 or 2^(x-1) * x
         // 4. Add 12 - 7 = 4 or Add n - 2^x + 1
         // 5. Recursively call the same function for (n - 2^x)
-        // Therefore, s(n) = 2^(x-) * x + (n - 2^x + 1) + s(n - 2^x)
+        // Therefore, s(n) = 2^(x-1) * x + (n - 2^x + 1) + s(n - 2^x)
     ```
  - Longest Consecutive 1's
     ``` C++
@@ -134,7 +134,7 @@
         return n ^ (n >> 1);
     ```
  - Gray code to Binary
-    ```
+    ``` C++
         // The Most Significant Bit (MSB) of the binary code is always equal to the MSB of the given gray code.
         // Other bits of the output binary code can be obtained by checking gray code bit at that index.
         // If current gray code bit is 0, then copy previous binary code bit, else copy invert of previous binary code bit.
@@ -149,7 +149,7 @@
             return res;
         }
  - Swap all odd and even bits
-    ```
+    ``` C++
         // Preserve the Even and Odd bits in two separate numbers
         // Right shift the even bits number and left shift the odd bits number
         // The even bits will come at the position of odd bits and odd bits will come at the position of even bits
