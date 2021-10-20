@@ -89,7 +89,7 @@
     ```
  - Power Set using Bitwise
     ``` C++
-        Iterates form 0 to 2^n - 1 and then check for 0 for not pick and 1 for pick and then pick up
+        // Iterates from 0 to 2^n - 1 and then check for 0 for not pick and 1 for pick the character
         int n = s.size();
         for(int i = 0; i < 2^n - 1; i++) {
             for(int j = 0; j < n; j++) {
