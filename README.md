@@ -4,7 +4,7 @@ This is a Repository containing record of daily DSA practice.
 ## Topics:
 1. [Mathematics](./Mathematics)
 2. [Bit Manipulation](https://github.com/IshitaBisaria/DSA/tree/main/Bit%20Manipulation)
-3. Arrays
+3. [Arrays](https://github.com/IshitaBisaria/DSA/tree/main/Arrays)
 4. Searching
 5. Sorting
 6. Matrix
