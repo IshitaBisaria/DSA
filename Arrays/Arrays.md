@@ -2,7 +2,7 @@
 2. Leader in an array
 3. Frequencies in a sorted array
 4. Maximum diff problem with order
-5. stock buy and sell problem
+5. Stock buy and sell problem
 6. Trapping rainwater problem
 7. Maximum consecutive 1s
 8. Maximum subarray sum
