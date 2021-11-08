@@ -8,7 +8,7 @@ This is a Repository containing record of daily DSA practice.
 4. Searching
 5. Sorting
 6. Matrix
-7. Strings
+7. [Strings](https://github.com/IshitaBisaria/DSA/tree/main/Strings)
 8. Hashing
 9. Recursion
 10. Linked List
