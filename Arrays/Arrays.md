@@ -9,9 +9,8 @@
 9. [Longest even odd subarray](.\Longest_Even_Odd_Subarray.cpp)
 10. [Maximum circular sum subarray](.\Maximum_Circular_Subarray_Sum.cpp)
 11. [Majority element](.\Majority_Element.cpp)
-12. Minimum consecutive flips
-13. Frequencies of limited range array elements
-14. [Smallest positive missing number](.\Smallest_Positive_Missing_Number.cpp)
-15. [Rearrange array alternatively](.\Rearrange_array_alternatively.cpp)
-16. [Maximum index](.\Maximum_Index.cpp)
-17. [Check if array is sorted and rotated](.\Check_is_Sorted_Rotated.cpp)
+12. [Minimum consecutive flips](.\Minimum_Consecutive_Flips.cpp)
+13. [Smallest positive missing number](.\Smallest_Positive_Missing_Number.cpp)
+14. [Rearrange array alternatively](.\Rearrange_array_alternatively.cpp)
+15. [Maximum index](.\Maximum_Index.cpp)
+16. [Check if array is sorted and rotated](.\Check_is_Sorted_Rotated.cpp)
