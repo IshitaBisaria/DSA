@@ -1,5 +1,4 @@
 # DSA
-This is a Repository containing record of daily DSA practice.
 
 ## Topics:
 1. [Mathematics](./Mathematics)
