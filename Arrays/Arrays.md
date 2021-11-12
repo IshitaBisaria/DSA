@@ -12,6 +12,6 @@
 12. Minimum consecutive flips
 13. Frequencies of limited range array elements
 14. [Smallest positive missing number](.\Smallest_Positive_Missing_Number.cpp)
-15. Rearrange array alternatively
+15. [Rearrange array alternatively](.\Rearrange_array_alternatively.cpp)
 16. Maximum index
 17. Check if array is sorted and rotated
